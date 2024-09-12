@@ -1,0 +1,19 @@
+<ion-content>
+  <div class="home">
+    <img loading="lazy" src="../../../assets/pg-h.png" class="home-bg" />
+    <img loading="lazy" src="../../../assets/icon/icons8-commande-terminée 1.png" class="home-icon" />
+    <div class="home-title">Succès !</div>
+    <div class="home-text">
+      Votre demande <br> de remboursement a bien été envoyée
+    </div>
+    <!-- <div class="ion-button-success home-action">
+      <ion-button>Suivi des demandes</ion-button>
+    </div> -->
+    <div class="ion-button-success home-action">
+      <ion-button (click)="onCreate()">Créer une nouvelle demande</ion-button>
+    </div>
+    <div class="ion-button-secondary home-action">
+      <ion-button (click)="follow()">Suivre les demandes</ion-button>
+    </div>
+  </div>
+</ion-content>

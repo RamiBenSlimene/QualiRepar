@@ -1,0 +1,5 @@
+<label for="file-import" class="custom-file-upload">  <img src="../../../assets/web/import.svg" alt="icon-upload">
+  Importer la facture
+</label>
+<input id="file-import" type="file" name="file" (change)="onSelectFile($event)"
+#fileImport style="display: none;" accept="image/*" capture="environment">

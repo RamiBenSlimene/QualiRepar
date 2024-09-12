@@ -1,0 +1,78 @@
+<app-header></app-header>
+<ion-content class="create-claim" *ngIf="!loading">
+    <div class="container">
+
+
+        <div class="request-claim-form">
+            <div class="card-error" *ngIf="errors.length > 0">
+                <div class="card-error-title">
+                    <ion-icon class="card-error-title-icon" name="alert-circle-outline"></ion-icon>
+                    <span class="card-error-title-text">Des erreurs ont été détectées dans votre demande de
+                        remboursement</span>
+                </div>
+                <div class="card-error-list">
+                    <ul *ngFor="let error of errors">
+                        <li>{{ error.Field }} : {{ error.ErrorMessage }}</li>
+                    </ul>
+                </div>
+            </div>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-xs="12" size-sm="12" size-md="12" size-lg="8">
+
+                    
+                    <div class="sub-title web">
+                        ClaimID : <span class="sub-title-item">{{claimId}}</span> |
+                        Statut : <span class="statut" [class]="'statut-'+statut">{{statut}}</span> 
+                      </div>  
+                      <div class="sub-title web"> 
+                          Marque sélectionnée : <span class="sub-title-item">[{{brand}}]</span> |
+                          Type de Produit sélectionné : <span class="sub-title-item">[{{product}}]</span>
+                      </div>
+
+                      <div class="sub-title mobile">
+                        <p>ClaimID : <span class="sub-title-item">{{claimId}}</span></p>
+                        <p> Statut : <span class="statut" [class]="'statut-'+statut">{{statut}}</span> </p>
+                        <p> Marque sélectionnée : <span class="sub-title-item">[{{brand}}]</span></p>
+                        <p> Type de Produit sélectionné : <span class="sub-title-item">[{{product}}]</span></p>
+                      </div>
+
+                    </ion-col>
+                    <ion-col size-xs="12" size-sm="12" size-md="12" size-lg="4" class="flex ion-align-items-center ion-justify-content-end">
+                        <app-update-invoice (requestUploadedEvent)="upload($event)"></app-update-invoice>
+                        <img src="../../../assets/icon/download.svg" alt="" height="30px" class="ion-margin" (click)="download()">
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+            <app-billing-info [facturationForm]="facturationForm"></app-billing-info>
+            <app-consumer-info [userForm]="userForm"></app-consumer-info>
+            <app-product-info [infoProductForm]="infoProductForm"></app-product-info>
+            <!-- Save Button -->
+            <ion-grid>
+                <ion-row class="ion-justify-content-end">
+                    <ion-col size-sm="12" size-md="4" size-lg="2">
+                        <div class="ion-button-reset">
+                            <ion-button (click)="saveClaim()">Enregistrer</ion-button>
+                        </div>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="4">
+                        <div class="ion-button-blue">
+                            <ion-button [disabled]="!userForm.valid || !infoProductForm.valid || !facturationForm.valid"
+                                (click)="sendClaim()">Envoyer la demande de
+                                remboursement</ion-button>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+        <ion-alert [isOpen]="isAlertOpen" header="Information"
+            message="La facture fournie ne nous a pas permis de préremplir votre demande." [buttons]="alertButtons"
+            (didDismiss)="setOpen(false)"></ion-alert>
+    </div>
+</ion-content>
+
+<ion-content class="create-claim" *ngIf="loading">
+    <div class="spinner-container">
+        <ion-spinner color="secondary"></ion-spinner>
+    </div>
+</ion-content>

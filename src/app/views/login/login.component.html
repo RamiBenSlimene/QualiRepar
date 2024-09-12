@@ -1,0 +1,50 @@
+<ion-content color="white">
+    <div class="login">
+      <div class="login-form ion-padding" [formGroup]="form">
+        <div class="login-header">
+          <div class="login-text">
+            <ion-text class="secondary-text">
+              Connectez-vous en utilisant votre compte ou votre adresse e-mail
+            </ion-text>
+          </div>
+          <img loading="lazy" src="../../../assets/QualiRéparFlash_Blanc.png" class="calculate-support-icon" />
+        </div>
+  
+        <ion-list>
+          <ion-item>
+            <ion-icon slot="start" name="person-outline" aria-hidden="true"></ion-icon>
+            <ion-input formControlName="User" labelPlacement="floating">
+              <div class="login-placeholder" slot="label">Compte Agora ou adresse email <ion-text
+                  color="danger">*</ion-text></div>
+            </ion-input>
+          </ion-item>
+        </ion-list>
+        <br>
+        <ion-list>
+          <ion-item>
+            <ion-icon slot="start" name="lock-closed-outline" aria-hidden="true"></ion-icon>
+            <ion-input formControlName="Password" labelPlacement="floating" type="password">
+              <div class="login-placeholder" slot="label">Mot de passe <ion-text color="danger">*</ion-text></div>
+            </ion-input>
+          </ion-item>
+        </ion-list>
+  
+        <br>
+  
+  
+        <ion-toggle class="secondary-text" color="light" labelPlacement="end" formControlName="rememberCredentials"
+          (ionChange)="onToggleRememberCredentials($event)">Mémoriser
+          mes identifiants</ion-toggle>
+  
+  
+      </div>
+      <div class="login-action ion-padding">
+        <div class="ion-button-success">
+          <ion-button (click)="login()">Connexion</ion-button>
+        </div>
+        <div class="ion-button-info">
+          <ion-button (click)="forgotPassword()">Mot de passe oublié</ion-button>
+        </div>
+      </div>
+    </div>
+  </ion-content>

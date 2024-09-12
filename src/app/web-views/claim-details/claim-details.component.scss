@@ -1,0 +1,65 @@
+.claim-details{
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    &-back{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        color: white;
+        background-color:  #37A6DE;
+        font-weight: 600;
+        padding: .125rem 1rem;
+        ion-icon {
+            font-size: 28px;
+            margin-right: .5rem;
+          }
+
+    }
+    &-row{
+        margin: 2rem;
+        span{
+            color: #7592B2;
+        }
+        &-status {
+            border-radius: 8px;
+            color: black;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 4px 12px;
+            width: fit-content;
+
+            &-CLOSEDACCEPTED {
+                background-color: rgb(122, 117, 117);
+                color: white;
+            }
+            &-ACCEPTED {
+                background: #37A6DE;
+                color: white;
+            }
+            &-VALID {
+                background: rgba(122, 167, 1, 0.47);
+            }
+            &-NOTVALID {
+                background: #FCE1C1;
+            }
+            &-NOTCONFORM {
+                background: #ff8f00;
+                color: white;
+            }
+            &-REFUSED {
+                background: rgba(183, 31, 15, 0.28);
+            }
+            &-ERROR {
+                background: rgba(183, 31, 15, 0.28);
+            }
+            &-CANCELLED {
+                color: white;
+                background-color: tomato;
+            }
+            &-ARBITRATION {
+                background: #EAF5FF;
+            }
+        }
+    }
+    
+}

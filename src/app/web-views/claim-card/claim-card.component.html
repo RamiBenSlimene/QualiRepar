@@ -1,0 +1,11 @@
+<div class="claim-card">
+  <div class="claim-card-h1">
+    <div class="claim-card-h1-id">{{id}}</div>  
+    <div *ngIf="status" class="claim-card-h1-status" [class]="'claim-card-h1-status-'+ status"> {{ statusDescriptions[status] }}</div>
+  </div>
+  <div class="claim-card-h1">
+    <div class="claim-card-h1-type">{{type}}</div>
+    <div class="claim-card-h1-ecoOrganisme" [ngClass]="{ecologic : ecoOrganisme === 'Ecologic', ecosystem : ecoOrganisme === 'Ecosystem'}">{{ecoOrganisme}}</div>
+    
+  </div>
+</div>

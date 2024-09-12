@@ -1,0 +1,7 @@
+{
+  "name": "QualiRéparFlash",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

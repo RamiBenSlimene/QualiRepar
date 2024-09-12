@@ -1,0 +1,5 @@
+<label for="file-upload" class="custom-file-upload">  <img src="../../../assets/web/edit.svg" alt="icon-upload">
+  Modifier la facture
+</label>
+<input id="file-upload" type="file" name="file" (change)="onSelectFile($event)" #fileInput style="display: none;" 
+accept="image/*" capture="environment">

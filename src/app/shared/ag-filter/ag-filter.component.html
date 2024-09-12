@@ -1,0 +1,28 @@
+<div class="ag-filter">
+    <p><b>Bienvenue sur le Portail de Demande de Remboursement pour Réparateurs !</b></p>
+    <p>Nous sommes ravis de vous accueillir sur notre plateforme dédiée aux demandes de remboursement. <br>Notre portail
+        a été conçu pour simplifier le processus de remboursement, faisant gagner du temps et facilitant vos
+        interactions avec les éco organismes.</p>
+    <small><b>Veuillez renseigner les informations nécessaires pour procéder à votre demande de
+            remboursement.</b></small>
+
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="grid mt-2">
+            <div class="col-12 md:col-4">
+                <!-- <p-dropdown formControlName="brandId" [options]="brandList" optionLabel="BrandName" optionValue="BrandId"
+                    placeholder="Marque" [style]="{'width':'100%'}"></p-dropdown> -->
+            </div>
+            <div class="col-12 md:col-4">
+                <!-- <p-dropdown formControlName="productId" [options]="productTypeList" optionLabel="ProductName" optionValue="ProductId"
+                    placeholder="Type de produit"[style]="{'width':'100%','font-size':'20px'}"></p-dropdown> -->
+            </div>
+            <div class="col-12 md:col-4">
+                <button type="submit" class="btn-primary"> Vérifier</button>
+            </div>
+
+        </div>
+    </form>
+
+
+</div>

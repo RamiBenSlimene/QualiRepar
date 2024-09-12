@@ -1,0 +1,93 @@
+<app-header></app-header>
+<ion-content>
+    <div class="container">
+        <div class="calculate-support">
+            <img loading="lazy" src="../../../assets/web/welcome.svg" class="calculate-support-icon" />
+            <div class="calculate-support-head">
+                <div class="calculate-support-head-title">
+                    Bienvenue sur votre portail !
+                </div>
+                <!-- <div class="calculate-support-head-text">
+                    Notre système vous permet de remplir automatiquement votre demande de remboursement en important votre facture, ce qui vous fait gagner du temps.
+                </div> -->
+            </div>
+            <div class="calculate-support-body">
+                <div class="calculate-support-body-text ion-margin-bottom">
+                    Veuillez renseigner les informations nécessaires pour obtenir le montant du soutien ou procéder à votre demande de remboursement
+                </div>
+                <div class="calculate-support-body-form">
+                    <ng-select  [items]="brandList"
+                                [virtualScroll]="true"
+                                bindLabel="BrandName"
+                                placeholder="Marque"
+                                [(ngModel)]="brand"
+                                [searchable]="true"
+                                [closeOnSelect]="true"
+                                (clear)="clearBrand()"
+                                notFoundText="Aucune marque trouvée">
+                    </ng-select>
+
+                    <ng-select  [items]="productTypeList"
+                                [virtualScroll]="true"
+                                bindLabel="ProductName"
+                                placeholder="Type de produit"
+                                [(ngModel)]="product"
+                                [searchable]="true"
+                                [closeOnSelect]="true"
+                                (clear)="clearProduct()"
+                                notFoundText="Aucun type de produit trouvée">
+                    </ng-select>
+
+                </div>
+                <div class="home-btn ion-button-success">
+                    <ion-button (click)="calculate()" id="calculate" [disabled]="!brand || !product">Vérifier</ion-button>
+                </div>
+            </div>
+        </div>
+
+        <ion-modal #modalPrice [cssClass]="'center'">
+            <ng-template>
+                <div class="content calculate-popup" *ngIf="orgId && ammount">
+                    <ion-text class="text-eco text-center">
+                        <ion-img src="../../../assets/icons8-ok-QRF.svg" class="icon-ok" alt="" width="32px" height="32px"></ion-img>
+
+                        Selon le couple Marque/Type de produit un bonus réparation de {{ammount}} EUROS est proposé par
+                    </ion-text>
+                    <ion-img src="../../../assets/ecosystem.jpg" alt="ecosystem" width="150px" height="auto" *ngIf="orgId === '45'"></ion-img>
+                    <ion-img src="../../../assets/ecologic.logo.svg" alt="ecologic" width="50px" height="auto" *ngIf="orgId === '44'"></ion-img>
+                    <div class="calculate-popup-action">
+                        <app-import-invoice (requestUploadedEvent)="upload($event)"> </app-import-invoice>
+                        <div class="ion-button-secondary">
+                            <ion-button (click)="close()">Annuler</ion-button>
+                        </div>
+                    </div>
+                </div>
+
+            </ng-template>
+
+        </ion-modal>
+
+        <ion-modal #modalEligibitlity [cssClass]="'center'">
+            <ng-template>
+                <div class="content-popup">
+                    <ion-text class="text-eco">Vous n'êtes pas autorisé à faire une demande de soutien pour
+                        <ion-text *ngIf="orgId === '45'">Ecosystem</ion-text>
+
+                        <ion-text *ngIf="orgId === '44'">Ecologic</ion-text>
+                        , merci de mettre à jour vos informations dans ce
+
+                        <ion-text (click)="redirect()"><u style="cursor: pointer;">lien</u>
+                        </ion-text>
+                        si vous ne l'avez pas fait.
+
+                    </ion-text>
+                    <div class="ion-button-secondary">
+                        <ion-button (click)="closeElig()">Annuler</ion-button>
+                    </div>
+                </div>
+
+            </ng-template>
+
+        </ion-modal>
+    </div>
+</ion-content>

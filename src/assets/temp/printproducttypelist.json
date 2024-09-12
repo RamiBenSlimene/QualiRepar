@@ -1,0 +1,948 @@
+{
+    "ResponseData": [
+      {
+        "ProductId": "EEE.M1.010",
+        "ProductName": "Cave à vin",
+        "EligibilityStartDate": "2022-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G12",
+          "G13",
+          "C05",
+          "C01",
+          "C10"
+        ],
+        "IRISSymtoms": [
+          "XX4",
+          "XX6",
+          "XX12",
+          "XX13",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M1.016",
+        "ProductName": "Réfrigérateur / Congélateur",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G12",
+          "G13",
+          "C05",
+          "C01",
+          "C10"
+        ],
+        "IRISSymtoms": [
+          "XX4",
+          "XX6",
+          "XX9",
+          "XX12",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M2.044",
+        "ProductName": "Ordinateur portable",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "EXC",
+          "G02",
+          "PCC",
+          "CAM",
+          "MDJ",
+          "MIC"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX9",
+          "XX1",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M2.057",
+        "ProductName": "Tablette",
+        "EligibilityStartDate": "2022-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "G12",
+          "EXC",
+          "G02",
+          "CAM",
+          "MIC"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX11",
+          "XX13",
+          "XX1",
+          "XX20",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M2.061",
+        "ProductName": "Téléviseur",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DDE",
+          "PSP",
+          "G12",
+          "EXC",
+          "G02",
+          "QQQ"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX11",
+          "XX13",
+          "XX1",
+          "XX20",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.002",
+        "ProductName": "Rameur",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "G12",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX9",
+          "XX15",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.018",
+        "ProductName": "Cuisinière",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G18",
+          "G02",
+          "C10",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX14",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.025",
+        "ProductName": "Four encastrable (hors micro-onde)",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G18",
+          "G02",
+          "G40"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX14",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.030",
+        "ProductName": "Hotte",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G12",
+          "G22",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX7",
+          "XX13",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.032",
+        "ProductName": "Instrument de musique",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G12",
+          "EXC",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX1",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.033",
+        "ProductName": "Lave-linge",
+        "EligibilityStartDate": "2022-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G12",
+          "G13",
+          "G18",
+          "G22",
+          "W05",
+          "G40",
+          "G71"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX6",
+          "XX9",
+          "XX10",
+          "XX15",
+          "XX16",
+          "XX17",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.034",
+        "ProductName": "Lave-vaisselle",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G12",
+          "G13",
+          "G18",
+          "G22",
+          "W05",
+          "G02",
+          "G40",
+          "G71"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX6",
+          "XX9",
+          "XX10",
+          "XX16",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.054",
+        "ProductName": "Sèche-linge",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G12",
+          "G13",
+          "G18",
+          "G22",
+          "W05",
+          "G02",
+          "G40",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX6",
+          "XX9",
+          "XX14",
+          "XX15",
+          "XX16",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.055",
+        "ProductName": "Plaque de cuisson",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G12",
+          "G13",
+          "G18",
+          "G02",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX14",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.058",
+        "ProductName": "Taille haie électrique",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G22",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX9",
+          "XX15",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M4.062",
+        "ProductName": "Tondeuse à gazon électrique",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G22",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX9",
+          "XX15",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.001",
+        "ProductName": "Amplificateur",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G13",
+          "EXC",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.003",
+        "ProductName": "Appareil photo numérique",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "G12",
+          "EXC",
+          "G02",
+          "RRR"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX1",
+          "XX20",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.004",
+        "ProductName": "Aspirateur : balai, robot, traineau",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G12",
+          "G13",
+          "G22",
+          "G73"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX7",
+          "XX9",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.007",
+        "ProductName": "Bouilloire",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G18",
+          "W05",
+          "G02",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX13",
+          "XX14",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.009",
+        "ProductName": "Machine à café proportionné (dosette)",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G13",
+          "G18",
+          "W05",
+          "G02",
+          "C10",
+          "G71",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX6",
+          "XX13",
+          "XX14",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.011",
+        "ProductName": "Centrale vapeur",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G18",
+          "W05",
+          "G02",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX6",
+          "XX13",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.012",
+        "ProductName": "Centrifugeuse et extracteur",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G12",
+          "G22",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX6",
+          "XX13",
+          "XX15",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.013",
+        "ProductName": "Chaine hi-fi",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G12",
+          "EXC",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX1",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.017",
+        "ProductName": "Console de jeux",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G12",
+          "EXC",
+          "G02",
+          "MDJ"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX1",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.019",
+        "ProductName": "Défroisseur à main",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G18",
+          "W05",
+          "G02",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX13",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.020",
+        "ProductName": "Drone",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "G12",
+          "EXC",
+          "G22",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX9",
+          "XX15",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.021",
+        "ProductName": "Enceinte",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "G12",
+          "EXC",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX1",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.024",
+        "ProductName": "Fer à repasser",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G18",
+          "W05",
+          "G02",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX13",
+          "XX14",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.028",
+        "ProductName": "Grille-pain",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G18",
+          "G02",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX13",
+          "XX14",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.029",
+        "ProductName": "Home-cinéma",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G12",
+          "EXC",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.035",
+        "ProductName": "Lecteur DVD",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G12",
+          "EXC",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX15",
+          "XX1",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.036",
+        "ProductName": "Lecteur Enregistreur Audio Vidéo",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G12",
+          "EXC",
+          "G02",
+          "MDJ"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX15",
+          "XX1",
+          "XX20",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.038",
+        "ProductName": "Machine à café avec filtre",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G13",
+          "G18",
+          "W05",
+          "G02",
+          "C10",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX6",
+          "XX13",
+          "XX14",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.039",
+        "ProductName": "Machine à café tout automatique",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G13",
+          "G18",
+          "W05",
+          "G02",
+          "C10",
+          "G71",
+          "ZZZ"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX6",
+          "XX13",
+          "XX14",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.047",
+        "ProductName": "Perceuse / visseuse",
+        "EligibilityStartDate": "2022-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G13",
+          "G22",
+          "G02",
+          "UUU"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX15",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.048",
+        "ProductName": "Presse-agrumes",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G12",
+          "G22",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX5",
+          "XX13",
+          "XX15",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.056",
+        "ProductName": "Table de mixage",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G12",
+          "EXC",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.065",
+        "ProductName": "Tuner / démodulateur",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "PSP",
+          "G12",
+          "EXC",
+          "G02",
+          "MDJ"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX11",
+          "XX13",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M5.068",
+        "ProductName": "Vidéoprojecteur",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "PSP",
+          "G12",
+          "EXC",
+          "G02",
+          "RRR"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX13",
+          "XX1",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M6.060",
+        "ProductName": "Téléphone portable",
+        "EligibilityStartDate": "2022-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "G12",
+          "EXC",
+          "G02",
+          "CAM",
+          "MIC",
+          "PSU"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX11",
+          "XX13",
+          "XX1",
+          "XX20",
+          "XX19",
+          "XX22",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M8.064",
+        "ProductName": "Trottinette électrique",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "G12",
+          "G22",
+          "G02"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX9",
+          "XX15",
+          "XX1",
+          "XX23"
+        ]
+      },
+      {
+        "ProductId": "EEE.M8.066",
+        "ProductName": "Vélo à assistance électrique",
+        "EligibilityStartDate": "2023-01-01T00:00:00",
+        "EligibilityEndDate": "9999-12-31T00:00:00",
+        "RepairCodes": [
+          "XXX",
+          "DAE",
+          "G12",
+          "G22",
+          "G02",
+          "TTT"
+        ],
+        "IRISSymtoms": [
+          "XX6",
+          "XX9",
+          "XX15",
+          "XX1",
+          "XX23"
+        ]
+      }
+    ],
+    "ResponseStatus": "S",
+    "IsValid": true,
+    "ResponseMessage": "",
+    "ResponseErrorMessage": ""
+  }

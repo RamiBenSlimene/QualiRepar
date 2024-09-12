@@ -1,0 +1,307 @@
+@import "variables.scss";
+.container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+@media only screen and (min-width: $sm-screen) {
+    .container {
+        max-width: 100%;
+        margin: 10px;
+    }
+}
+@media only screen and (min-width: $md-screen) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: $lg-screen) {
+    .container {
+        max-width: 980px;
+    }
+}
+
+@media only screen and (min-width: $xl-screen) {
+    .container {
+        max-width: 1150px;
+    }
+}
+
+@media only screen and (min-width: $xxl-screen) {
+    .container {
+        max-width: 1320px;
+    }
+}
+@media only screen and (min-width: $xxxl-screen) {
+    .container {
+        max-width: 1560px;
+    }
+}
+.full-width {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.btn-primary {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: var(--ag-primary-color);
+    border: 1px solid var(--ag-primary-color);
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.home-btn {
+    width: 60% !important;
+    margin: 0 auto !important;
+}
+
+.ion-button-success {
+    width: 100%;
+    ion-button {
+        --background: var(--ag-primary-color);
+        --color: white;
+        --border-radius: 4px;
+        --border-color: var(--ag-primary-color);
+        --border-style: solid;
+        --border-width: 1px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
+        --padding-top: 15px;
+        --padding-bottom: 15px;
+        width: 100%;
+    }
+}
+
+.ion-button-secondary {
+    width: 100%;
+    ion-button {
+        --background: white;
+        --color: var(--ag-primary-color);
+        --border-radius: 4px;
+        --border-color: var(--ag-primary-color);
+        --border-style: solid;
+        --border-width: 2px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
+        --padding-top: 11px;
+        --padding-bottom: 11px;
+        --background-activated: var(--ag-primary-color);
+        --color-activated: white;
+        width: 100%;
+    }
+}
+
+.ion-button-dark {
+    width: 100%;
+    ion-button {
+        --background: var(--background-color-dark);
+        --color: white;
+        --border-radius: 4px;
+        --border-color: var(--background-color-dark);
+        --border-style: solid;
+        --border-width: 1px;
+        --padding-top: 10px;
+        --padding-bottom: 10px;
+        width: 100%;
+    }
+}
+
+.ion-button-blue {
+    width: 100%;
+    ion-button {
+        --background: var(--background-color-blue);
+        --color: white;
+        --border-radius: 4px;
+        --border-color: var(--background-color-blue);
+        --border-style: solid;
+        --border-width: 1px;
+        --padding-top: 14px;
+        --padding-bottom: 14px;
+        width: 100%;
+    }
+}
+
+.ion-button-warning {
+    width: 100%;
+    ion-button {
+        --background: var(--background-color-yellow);
+        --color: var(--background-color-dark);
+        --border-radius: 4px;
+        --border-color: var(--background-color-yellow);
+        --border-style: solid;
+        --border-width: 1px;
+        --padding-top: 10px;
+        --padding-bottom: 10px;
+        width: 100%;
+    }
+}
+
+.ion-button-dark-text {
+    width: 100%;
+    ion-button {
+        --background: #EAF5FF;
+        // --background: var(--background-color-blue-ligth);
+        --color: var(--background-color-dark);
+        --border-radius: 4px;
+        --border-color: var(--background-color-blue-ligth);
+        --border-style: solid;
+        --border-width: 1px;
+        --padding-top: 15px;
+        --padding-bottom: 15px;
+        font-weight: 700;
+        width: 100%;
+    }
+}
+
+.ion-button-info {
+    width: 100%;
+    ion-button {
+        --background: white;
+        --color: var(--ag-primary-color);
+        --padding-top: 10px;
+        --padding-bottom: 10px;
+        --border-radius: 4px;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 100%;
+    }
+}
+.ion-button-reset {
+    width: 100%;
+    ion-button {
+        --background: white;
+        --color: var(--background-color-dark);
+        --border-radius: 4px;
+        --border-color: var(--background-color-dark);
+        --border-style: solid;
+        --border-width: 1px;
+        --padding-top: 14px;
+        --padding-bottom: 14px;
+        font-weight: 700;
+        width: 100%;
+        &:hover{
+            --color: white;
+            --background: var(--background-color-dark);
+        }
+    }
+}
+.primary-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #29759E;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0.07px;
+}
+
+.primary-text {
+    color: var(--ag-primary-color);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.info-text {
+    color: black;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.secondary-text {
+    color: var(--ag-white-color);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.default-bg {
+    height: 40%;
+    background: url(../../assets/pg-h.png) top center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: scroll;
+}
+
+.md-modal {
+    border-radius: 16px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    position: absolute;
+    width: 90vw;
+    height: 50vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 0;
+}
+
+.ion-padding {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+
+@media only screen and (max-width: 400px) {
+    ion-button {
+        font-size: 12px;
+    }
+    .calculate-popup {
+        ion-button {
+            font-size: 10px;
+        }
+    }
+}
+
+.bg-white {
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px rgba(55, 65, 81, 0.06), 0px 2px 6px 0px rgba(55, 65, 81, 0.10);
+}
+
+.flex {
+    display: flex;
+}
+
+.icon-sm {
+    width: 30px;
+}
+
+.label-md {
+    padding-left: 8px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.primary-link {
+    cursor: pointer;
+    color: #00B3DD;
+    font-family: Lexend;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}

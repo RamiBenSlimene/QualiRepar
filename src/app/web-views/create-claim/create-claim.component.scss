@@ -1,0 +1,132 @@
+.container {
+    border-radius: 10px;
+    border: 1px solid rgba(196, 196, 196, 0.30);
+    background-color: rgba(234, 245, 255, 0.47);
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.sub-title{
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    &-item{
+        color : var(--ag-primary-color)
+    }
+}
+.request-claim-form {
+    margin: 1rem 1rem;
+    .card-error {
+        border: 1px solid #CBD5E1;
+        border-radius: 4px;
+        margin: 1rem 0;
+        padding: 1rem .5rem;
+        &-title {
+            display: flex;
+            align-items: center;
+            &-text {
+                font-size: 14px;
+                font-weight: 600;
+            }
+            &-icon {
+                color:var(--ion-color-danger);
+                font-size: 40px;
+                margin: 0 1rem;
+            }
+        }
+        &-list {
+            color:var(--ion-color-danger);
+            font-size: 15px;
+            line-height: 20px;
+        }
+    }
+}
+
+ion-list {
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.invalid-border {
+    --border-color: red;
+    --border-width: 2px;
+}
+
+.ion-padding {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+
+.create-claim {
+    &-header {
+        height: 35px;
+        font-size: 16px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        align-items: flex-end;
+        ion-icon {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 8px;
+        }
+    }
+}
+
+.empty-space {
+    height: 3rem;
+}
+
+.sub-title{
+    font-size: 14px;
+    font-weight: 700;
+    &-item{
+        color : var(--ag-primary-color)
+    }
+    .statut {
+        border-radius: 8px;
+        color: black;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 6px;
+        padding: 4px 18px;
+        background-color: rgb(122, 117, 117);
+        color: white;
+        &-CLOSEDACCEPTED {
+            background-color: rgb(122, 117, 117);
+            color: white;
+        }
+        &-ACCEPTED {
+            background: #37A6DE;
+            color: white;
+        }
+        &-VALID {
+            background: rgba(122, 167, 1, 0.47);
+        }
+        &-NOTVALID {
+            background: #FCE1C1;
+        }
+        &-NOTCONFORM {
+            background: #ff8f00;
+            color: white;
+        }
+        &-REFUSED {
+            background: rgba(183, 31, 15, 0.28);
+        }
+        &-ERROR {
+            background: rgba(183, 31, 15, 0.28);
+        }
+        &-CANCELLED {
+            color: white;
+            background-color: tomato;
+        }
+        &-ARBITRATION {
+            background: #EAF5FF;
+        }
+        &-WAITNIG {
+            color: white;
+            background-color: yellow;
+        }
+        &-Erreur{
+            background: rgba(183, 31, 15, 0.28);        }
+    }
+}

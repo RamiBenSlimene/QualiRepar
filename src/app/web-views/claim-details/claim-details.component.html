@@ -1,0 +1,41 @@
+<div class="claim-details-back" (click)="goBack()">
+  <ion-icon name="arrow-back-outline"></ion-icon>
+   <p>Suivi des demandes</p>
+</div>
+<ion-content>
+  <div class="container">
+    <div class="claim-details">
+      <div class="claim-details-row">
+        <p>N° dossier e-réparateur</p>
+        <span>{{claim.ClaimId}}</span>
+      </div>
+      
+
+      <div class="claim-details-row">
+        <p>Statut du dossier</p>
+        <p *ngIf="claim.LastStatus" class="claim-details-row-status" [class]="'claim-details-row-status-'+ claim.LastStatus"> {{ statusDescriptions[claim.LastStatus] }}</p>
+      </div>
+
+      <div class="claim-details-row">
+        <p>Type appareil</p>
+        <span>{{claim.ModelLabel}}</span>
+      </div>
+      <div class="claim-details-row">
+        <p>Marque</p>
+        <span>{{claim.BrandLabel}}</span>
+      </div>
+      <!-- <div class="claim-details-row">
+        <p>Dernière date de modif</p>
+        <span>******</span>
+      </div> -->
+      <div class="claim-details-row">
+        <p>Date d’ouverture </p>
+        <span>{{claim.CreateDate | date : 'dd/MM/yyyy'}}</span>
+      </div>
+
+    </div>
+  
+  </div>
+
+
+</ion-content>

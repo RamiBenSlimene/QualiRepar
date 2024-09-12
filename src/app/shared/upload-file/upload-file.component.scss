@@ -1,0 +1,71 @@
+/* upload-photo.component.css */
+
+.upload-label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.fill {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+.file-details {
+    margin-top: 10px;
+}
+
+.import-invoice {
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.disabled {
+    img {
+        margin-right: 6px;
+    }
+}
+
+ion-modal {
+    --border-radius: 24px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    .select-invoice {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 25%;
+        ion-icon {
+            font-size: 20px;
+            color: #028DAF;
+            border: 1px solid #C4C4C4;
+            padding: 12px;
+            border-radius: 50%;
+        }
+        .select-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+        }
+        .select-file {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

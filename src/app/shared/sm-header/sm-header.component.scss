@@ -1,0 +1,28 @@
+@import "/src/app/styles/variables.scss";
+.header {
+    background-color: var(--ag-primary-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.19);
+    position: relative;
+    padding: 0.25rem ;
+    z-index: 1;
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content:space-evenly;
+    }
+    .pipe {
+        height: 12px;
+        display: inline-block;
+        border-left: 2px solid #fff;
+    }
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 12px;
+    color: white;
+    padding: 5px;
+    &-active {
+        color: #FCE1C1;
+    }
+}

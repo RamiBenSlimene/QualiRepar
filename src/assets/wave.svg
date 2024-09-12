@@ -1,0 +1,7 @@
+<svg style="display: none;">
+  <defs>
+    <clipPath id="clip-wave" clipPathUnits="objectBoundingBox">
+      <path d="M0 0.2C0.15 0.35 0.25 0.5 0.5 0.5S0.85 0.35 1 0.2V1H0z"/>
+    </clipPath>
+  </defs>
+</svg>

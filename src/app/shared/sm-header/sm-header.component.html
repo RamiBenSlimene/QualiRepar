@@ -1,0 +1,15 @@
+<div class="header">
+      
+      <div class="navigation">
+          <a class="nav-link" #requestLink="routerLinkActive" [routerLink]="['/', routesPaths.CLAIM, routesPaths.REQUEST]" [class.nav-link-active]="!listLink.isActive" [routerLinkActive]="['nav-link-active']">
+    Créer votre demande 
+     </a>
+
+          <a class="nav-link" #listLink="routerLinkActive" [routerLink]="['/', routesPaths.CLAIM,routesPaths.LIST]" [class.nav-link-inactive]="!listLink.isActive" [routerLinkActive]="['nav-link-active']" [routerLinkActiveOptions]="{exact: true}">
+   Suivre les demandes 
+   </a>
+          <a class="nav-link nav-link-inactive" #apiLink="routerLinkActive" (click)="logout()" [routerLink]="['/',routesPaths.LOGIN]" [routerLinkActive]="['nav-link-active']" [routerLinkActiveOptions]="{exact: true}">
+          </a>
+      </div>
+
+</div>

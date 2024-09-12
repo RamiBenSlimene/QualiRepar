@@ -1,0 +1,54 @@
+<div class="header" (clickOutside)="toogle = false">
+    <div class="container">
+        <div class="logo">
+            <img src="../../../assets/logo-header.svg" alt="qrf">
+        </div>
+        <div class="navigation">
+            <a class="nav-link" #requestLink="routerLinkActive"
+                [routerLink]="['/', routesPaths.CLAIM, routesPaths.REQUEST]"
+                [class.nav-link-active]="!listLink.isActive" [routerLinkActive]="['nav-link-active']">
+                Créer votre demande
+            </a>
+            <span class="pipe"></span>
+
+            <a class="nav-link" #listLink="routerLinkActive" [routerLink]="['/', routesPaths.CLAIM,routesPaths.LIST]"
+                [class.nav-link-inactive]="!listLink.isActive" [routerLinkActive]="['nav-link-active']"
+                [routerLinkActiveOptions]="{exact: true}">
+                Suivre les demandes
+            </a>
+            <span class="pipe"></span>
+            <a class="nav-link nav-link-inactive" #apiLink="routerLinkActive" (click)="logout()"
+                [routerLink]="['/',routesPaths.LOGIN]" [routerLinkActive]="['nav-link-active']"
+                [routerLinkActiveOptions]="{exact: true}">
+                Déconnexion</a>
+        </div>
+
+        <div class="icon-mobile">
+            <div class="navbar-icon" (click)="toogleMenu()">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <div class="items-toogle" *ngIf="toogle">
+        <ul>
+            <li>
+                <a class="nav-link-sm" #requestLink="routerLinkActive"
+                    [routerLink]="['/', routesPaths.CLAIM, routesPaths.REQUEST]"
+                    [class.nav-link-sm-active]="!listLink.isActive" [routerLinkActive]="['nav-link-sm-active']">
+                    Créer votre demande
+                </a>
+            </li>
+            <li> <a class="nav-link-sm" #listLink="routerLinkActive"
+                    [routerLink]="['/', routesPaths.CLAIM,routesPaths.LIST]"
+                    [class.nav-link-sm-inactive]="!listLink.isActive" [routerLinkActive]="['nav-link-sm-active']"
+                    [routerLinkActiveOptions]="{exact: true}">
+                    Suivre les demandes
+                </a></li>
+            <li> <a class="nav-link-sm nav-link-sm-inactive" #apiLink="routerLinkActive" (click)="logout()"
+                    [routerLink]="['/',routesPaths.LOGIN]" [routerLinkActive]="['nav-link-sm-active']"
+                    [routerLinkActiveOptions]="{exact: true}">
+                    Déconnexion</a></li>
+        </ul>
+
+    </div>
+    </div>

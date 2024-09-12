@@ -1,0 +1,42 @@
+<!-- 
+<div class="ion-button-warning" *ngIf="title ==='Importer la facture' || title === 'Modifier la facture' ">
+    <ion-button class="import-invoice " id="open-modal-{{title}}" (click)="upload()">
+        <img src="../../../assets/web/import.svg" alt="icon-upload" width="22px" height="auto" style="margin-right: 20px;"> {{title}}
+    </ion-button>
+</div>
+
+<div class="ion-button-dark-text" *ngIf="!otherPieceLoaded && (title !=='Importer la facture' ) && (title !== 'Facture') && (title !== 'Modifier la facture')">
+    <ion-button class="import-invoice " id="open-modal-{{title}}" (click)="upload()">
+        <img src="../../../assets/icon/import2.svg" alt="icon-upload" width="22px" height="auto" style="margin-right: 20px;">
+        {{title}}</ion-button>
+</div>
+
+<div class="ion-button-dark-text" *ngIf="!otherPieceLoaded && title ==='Facture' && !FactureAttchementViaCompletion">
+    <ion-button class="import-invoice " id="open-modal-{{title}}" (click)="upload()">
+        <ion-icon name="cloud-upload-outline" slot="start"></ion-icon>
+        {{title}}</ion-button>
+</div>
+
+<div class="ion-button-dark-text" *ngIf="otherPieceLoaded && title ==='Plaque signalétique'">
+    <ion-button class="import-invoice disabled" id="open-modal-{{title}}" (click)="upload()">
+        <img src="../../../assets/icon/Success.svg" alt="icon-success" width="20px" height="auto"> Plaque signalétique
+    </ion-button>
+</div>
+
+
+<div class="ion-button-dark-text" *ngIf="otherPieceLoaded && title ==='Validation manuscrite'">
+    <ion-button class="import-invoice disabled" id="open-modal-{{title}}" (click)="upload()">
+        <img src="../../../assets/icon/Success.svg" alt="icon-success" width="20px" height="auto"> Validation manuscrite
+    </ion-button>
+</div>
+
+
+<div class="ion-button-dark-text" id="open-modal-{{title}}">
+    <ion-button class="import-invoice disabled" (click)="upload()" *ngIf="title ==='Facture' && !FactureAttchementViaCompletion && otherPieceLoaded">
+        <img src="../../../assets/icon/Success.svg" alt="icon-success" width="20px" height="auto"> Facture
+    </ion-button>
+
+    <ion-button class="import-invoice disabled" (click)="upload()" *ngIf="title ==='Facture' && FactureAttchementViaCompletion">
+        <img src="../../../assets/icon/Success.svg" alt="icon-success" width="20px" height="auto"> Facture
+    </ion-button>
+</div> -->

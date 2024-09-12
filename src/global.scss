@@ -1,0 +1,348 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+/* Optional CSS utils that can be commented out */
+@import "~@ng-select/ng-select/themes/material.theme.css";
+
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+@import './app/styles/shared.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+
+:root {
+    --ag-primary-color: #37A6DE;
+    --ag-secondary-color: #373737;
+    --ag-white-color: white;
+    --ag-danger-color: #B71F0F;
+    --background-color: rgba(0, 179, 221, 0.05);
+    --stepper-active: #00B3DD;
+    --stepper-active-text: #fff;
+    --stepper-checked: #7CBC56;
+    --stepper-checked-text: #fff;
+    --stepper-unchecked: #ffffff;
+    --stepper-unchecked-text: #fff;
+    --background-color-dark: #011627;
+    --background-color-yellow: #FDEA14;
+    --ion-font-family: 'Lexend';
+    --ion-color-white: #fff;
+    --background-color-blue: #37a6de;
+    --background-color-blue-ligth: rgba(234, 245, 255, 0.47);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    .ion-page {
+        justify-content: normal;
+    }
+}
+
+.searchTable {
+    margin-right: 1.2vh;
+
+    ion-input {
+        --background: #fff;
+        --border-radius: 5px;
+        padding: 8px;
+        margin: 0.2vh 0.5vh auto;
+    }
+}
+
+.ngx-datatable {
+    border-radius: 10px;
+    box-shadow: 0px -1px 0px 0px #E4E4EF inset !important;
+    width: 100%;
+    // border: 1px solid rgb(223, 220, 220);
+    margin: 2px;
+}
+
+.ngx-datatable.scroll-horz .datatable-body {
+    overflow-x: unset !important;
+}
+
+.ngx-datatable .datatable-header .datatable-row-center {
+    min-height: 45px !important;
+    background: #F6F7F9;
+}
+
+.ngx-datatable .datatable-header {
+    min-height: 44px !important;
+    background: #F6F7F9;
+    padding: 6px 12px;
+}
+
+@media only screen and (min-width: 956px) {
+    .ngx-datatable .datatable-body {
+        overflow-x: unset;
+    }
+}
+
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
+    box-shadow: 0px -1px 0px 0px #E4E4EF inset;
+    text-wrap: wrap !important;
+    word-wrap: break-word !important;
+    align-items: center;
+}
+
+.ngx-datatable.material:not(.cell-selection) .datatable-body-row:hover .datatable-row-group {
+    background-color: #f5f6ff !important;
+}
+
+.datatable-body {
+    word-wrap: break-word !important;
+}
+
+.ngx-datatable .datatable-body .datatable-body-row>div {
+    box-shadow: 0px -1px 0px 0px #E4E4EF inset;
+    padding: 10px 5px;
+}
+
+.ngx-datatable .datatable-body .empty-row {
+    text-align: center;
+    padding-top: 12px;
+    color: #9B9B9B;
+}
+
+.ngx-datatable .datatable-footer .datatable-pager .pager li a {
+    text-decoration: none;
+    color: #9B9B9B;
+    padding: 0 8px;
+    font-size: 15px;
+    font-weight: 700;
+
+    @media only screen and (max-width: $sm-screen) {
+        font-size: 12px;
+    }
+}
+
+.ngx-datatable .datatable-footer .datatable-pager .pager li.active {
+    a {
+        text-decoration: underline;
+        color: black;
+    }
+}
+
+.ngx-datatable .datatable-footer {
+    color: #9B9B9B;
+    padding: 0 12px;
+
+    @media only screen and (max-width: $sm-screen) {
+        font-size: 10px;
+    }
+}
+
+.ngx-datatable .datatable-body-cell,
+.ngx-datatable .datatable-header-cell {
+    overflow-x: unset;
+}
+
+.mt--2 {
+    margin-top: -0.25rem;
+}
+
+.ngx-datatable .datatable-body-row,
+.ngx-datatable .datatable-row-center,
+.ngx-datatable .datatable-header-inner {
+    @media only screen and (max-width: $lg-screen) {}
+}
+
+.column-Date,
+.column-Model,
+.column-Status {
+    @media only screen and (max-width: $xs-screen) {
+        display: none !important;
+    }
+}
+
+.column-Status {
+    @media only screen and (max-width: $sm-screen) {
+        display: none !important;
+    }
+}
+
+.column-Model {
+    @media only screen and (max-width: $sm-screen) {
+        display: none !important;
+    }
+}
+
+.column-Date {
+    @media (min-width: $md-screen) and (max-width: $xl-screen) {
+        display: none !important;
+    }
+
+    @media only screen and (max-width: $md-screen) {
+        display: none !important;
+    }
+
+    @media only screen and (max-width: $sm-screen) {
+        display: none !important;
+    }
+}
+
+.ng-select-container {
+    border: thin solid #CBD5E1;
+    content: "";
+    bottom: 0;
+    border-radius: 6px;
+    border-width: 1px;
+    left: 0;
+    position: absolute;
+    transition: border-color 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+    padding: 5px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 56px
+}
+
+.ng-select {
+    padding: 5px;
+}
+
+.ng-select .ng-select-container:after {
+    border-bottom: 0;
+
+}
+
+
+.ng-select .ng-select-container .ng-value-container {
+    padding: 0.2em 0;
+    border-top: 0.75em solid transparent;
+
+}
+
+.ng-select .ng-select-single .ng-select-container .ng-arrow-wrapper {
+    align-self: flex-end;
+    bottom: 14px;
+
+
+}
+
+.ng-select.ng-select-focused .ng-select-container .ng-arrow-wrapper .ng-arrow {
+    color: #808080;
+}
+
+.ng-select .ng-select-container .ng-value-container .ng-input>input {
+    padding-left: 16px !important;
+    margin-bottom: 3px;
+
+}
+
+.ng-select.ng-select-single .ng-select-container .ng-value-container,
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value {
+
+    padding-top: 4px;
+}
+
+.ng-select .ng-select-container .ng-value-container .ng-placeholder {
+    position: absolute;
+    color: rgb(0, 0, 0);
+
+}
+
+
+.ng-select.ng-select-focused .ng-select-container .ng-value-container .ng-placeholder,
+.ng-select .ng-has-value .ng-placeholder {
+    padding-top: 10px !important;
+}
+
+/* Define styles for ng select */
+.floating-label.ion-valid .ng-select.ng-select-focused .ng-select-container .ng-value-container .ng-placeholder {
+    color: #2dd36f;
+}
+
+
+.floating-label .ng-select.ng-select-focused .ng-select-container .ng-value-container .ng-placeholder {
+    color: #3880ff;
+}
+
+/* Danger state - Placeholder turns red when input is touched and empty */
+.floating-label.ion-touched.ion-invalid .ng-select-container .ng-value-container .ng-placeholder,
+.floating-label.input-label-placement-floating.ion-touched.ion-invalid .ng-select-container .ng-value-container .ng-placeholder,
+.floating-label.input-label-placement-stacked.ion-touched.ion-invalid .ng-select-container .ng-value-container .ng-placeholder {
+    color: #eb445a;
+}
+
+/* Default state - Placeholder turns black when input is valid and not touched */
+.floating-label.ion-untouched.ion-valid .ng-select-container .ng-value-container .ng-placeholder,
+.floating-label.input-label-placement-floating.ion-untouched.ion-valid .ng-select-container .ng-value-container .ng-placeholder,
+.floating-label.input-label-placement-stacked.ion-untouched.ion-valid .ng-select-container .ng-value-container .ng-placeholder {
+    color: black;
+}
+
+.ng-select .ng-select-container {
+    background-color: white;
+}
+
+.ng-dropdown-panel.ng-select-bottom {
+    top: calc(100% - 0.5em);
+}
+
+.ng-select-required {
+    .ng-placeholder {
+        &:after {
+            content: ' *';
+            color: #eb445a;
+        }
+    }
+}
+
+.label-text {
+    &:after {
+        content: ' *';
+        color: #eb445a;
+    }
+}
+
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+}
+
+.custom-spinner {
+    --width: 80px;
+    --height: 80px;
+}
+
+@media screen and (max-width:767px) {
+    .web {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+}

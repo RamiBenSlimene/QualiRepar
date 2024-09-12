@@ -1,0 +1,67 @@
+.claim-card {
+
+    margin: 20px 10px;
+    padding: 10px 14px;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #FDFEFE;
+    box-shadow: 0px 4px 44px 0px rgba(2, 76, 138, 0.16);
+
+    &-h1 {
+        display: flex;
+        justify-content: space-between;
+        margin: .5rem;
+        &-status {
+            border-radius: 8px;
+            color: black;
+            font-size: 14px;
+            font-weight: 400;
+            padding: 4px 12px;
+            &-CLOSEDACCEPTED {
+                background-color: rgb(122, 117, 117);
+                color: white;
+            }
+            &-ACCEPTED {
+                background: #37A6DE;
+                color: white;
+            }
+            &-VALID {
+                background: rgba(122, 167, 1, 0.47);
+            }
+            &-NOTVALID {
+                background: #FCE1C1;
+            }
+            &-NOTCONFORM {
+                background: #ff8f00;
+                color: white;
+            }
+            &-REFUSED {
+                background: rgba(183, 31, 15, 0.28);
+            }
+            &-ERROR {
+                background: rgba(183, 31, 15, 0.28);
+            }
+            &-CANCELLED {
+                color: white;
+                background-color: tomato;
+            }
+            &-ARBITRATION {
+                background: #EAF5FF;
+            }
+        }
+        &-type {
+            color: #7592B2;
+        }
+        &-ecoOrganisme {
+            font-size: 14px;
+        }
+        .ecologic {
+            color: #E35E00;
+        }
+        .ecosystem {
+            color: #05BAA3;
+        }
+
+    }
+}

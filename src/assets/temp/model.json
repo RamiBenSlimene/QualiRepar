@@ -1,0 +1,47 @@
+{
+    "Consumer": {
+      "Sex": "",
+      "LastName": "",
+      "FirstName": "",
+      "StreetNumber": "",
+      "Address1": "",
+      "Address2": "",
+      "Address3": "",
+      "Zip": "",
+      "City": "",
+      "Country": "",
+      "Phone": "",
+      "Email": ""
+    },
+    "Product": {
+      "Brand": "",
+      "ProductType": "",
+      "FailureDescription": ""
+    },
+    "Quote": {
+      "LaborCost": {
+        "Amount": "",
+        "Currency": ""
+      },
+      "SparePartsCost": {
+        "Amount":"",
+        "Currency": ""
+      },
+      "TravelCost": {
+        "Amount": "",
+        "Currency": ""
+      },
+      "TotalAmountExclVAT": {
+        "Amount": "58.25",
+        "Currency": "EUR"
+      },
+      "TotalAmountInclVAT": {
+        "Amount": "",
+        "Currency": ""
+      },
+      "SupportAmount": {
+        "Amount": "",
+        "Currency": ""
+      }
+    }
+  }

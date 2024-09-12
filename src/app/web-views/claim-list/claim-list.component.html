@@ -1,0 +1,180 @@
+<app-header></app-header>
+<ion-content class="web">
+    <div class="container">
+        <div class="claim">
+            <ion-grid>
+                <ion-row>
+                    <ion-col class="col-left" style="background-color: white; ">
+                        <div class="filter" (click)="getAll()">
+                            <img src="../../../assets/icon/filter.svg" alt="filter" width="auto" height="20px">
+                            <p>Tous les dossiers</p>
+                        </div>
+                        <div class="filter-navigation">                                                 
+                            <div class="filter-navigation-item">
+                                <div class="filter-navigation-item-title" [class.filter-navigation-item-title-active]="NOTVALID.active" (click)="filter(lastStatus.NOTVALID)">
+                                    {{NOTVALID.title}}
+                                </div>
+                                <div class="filter-navigation-item-count"> ({{NOTVALID.count}})</div>
+                            </div>
+                            <div class="filter-navigation-item">
+                                <div class="filter-navigation-item-title" [class.filter-navigation-item-title-active]="VALID.active" (click)="filter(lastStatus.VALID)">
+                                    {{VALID.title}}
+                                </div>
+                                <div class="filter-navigation-item-count"> ({{VALID.count}})</div>
+                            </div>
+                            <div class="filter-navigation-item">
+                                <div class="filter-navigation-item-title" [class.filter-navigation-item-title-active]="ARBITRATION.active" (click)="filter(lastStatus.ARBITRATION)">
+                                    {{ARBITRATION.title}}
+                                </div>
+                                <div class="filter-navigation-item-count"> ({{ARBITRATION.count}})</div>
+                            </div>
+                            <div class="filter-navigation-item">
+                                <div class="filter-navigation-item-title" [class.filter-navigation-item-title-active]="NOTCONFORM.active" (click)="filter(lastStatus.NOTCONFORM)">
+                                    {{NOTCONFORM.title}}
+                                </div>
+                                <div class="filter-navigation-item-count"> ({{NOTCONFORM.count}})</div>
+                            </div>
+                            <div class="filter-navigation-item">
+                                <div class="filter-navigation-item-title" [class.filter-navigation-item-title-active]="ACCEPTED.active" (click)="filter(lastStatus.ACCEPTED)">
+                                    {{ACCEPTED.title}}
+                                </div>
+                                <div class="filter-navigation-item-count"> ({{ACCEPTED.count}})</div>
+                            </div>
+                            <div class="filter-navigation-item">
+                                <div class="filter-navigation-item-title" [class.filter-navigation-item-title-active]="CLOSEDACCEPTED.active" [class.filter-navigation-item-title-active]="CLOSEDACCEPTED.active" (click)="filter(lastStatus.CLOSEDACCEPTED)">
+                                    {{CLOSEDACCEPTED.title}}
+                                </div>
+                                <div class="filter-navigation-item-count"> ({{CLOSEDACCEPTED.count}})</div>
+                            </div>                        
+                            <div class="filter-navigation-item">
+                                <div class="filter-navigation-item-title" [class.filter-navigation-item-title-active]="REFUSED.active" (click)="filter(lastStatus.REFUSED)">
+                                    {{REFUSED.title}}
+                                </div>
+                                <div class="filter-navigation-item-count"> ({{REFUSED.count}})</div>
+                            </div>                            
+                            <div class="filter-navigation-item">
+                                <div class="filter-navigation-item-title" [class.filter-navigation-item-title-active]="CANCELLED.active" (click)="filter(lastStatus.CANCELLED)">
+                                    {{CANCELLED.title}}
+                                </div>
+                                <div class="filter-navigation-item-count"> ({{CANCELLED.count}})</div>
+                            </div>
+                        </div>
+                    </ion-col>
+                    <ion-col class="col-right" style="background-color: white;">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col size-sm="12" size-md="6" size-lg="4">
+                                    <div align="left" class="searchTable">
+                                        <ion-item class="search-input">
+                                            <ion-icon slot="start" name="search" aria-hidden="true" class="icon-search"></ion-icon>
+                                            <ion-input type="text" placeholder="Rechercher" [(ngModel)]="searchText" (ionInput)="updateFilter($event)"></ion-input>
+                                        </ion-item>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+
+                        <ngx-datatable #table class="material" [columnMode]="ColumnMode.force" [footerHeight]="50" [headerHeight]="30" [messages]="{emptyMessage: 'Pas de demande à afficher'}" [rowHeight]="'auto'" [loadingIndicator]="loadingIndicator" [scrollbarH]="true" [limit]="10"
+                            [rows]="claims">
+
+                            <ngx-datatable-column prop="ClaimId">
+                                <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+                                    <span class="tableHeader">N° dossier</span>
+                                </ng-template>
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <span class="primary-link" (click)="redirect(row.ClaimId,row.LastStatus, row.EcoOrganisme)"> {{ row?.ClaimId }} </span>
+                                </ng-template>
+                            </ngx-datatable-column>
+
+                            <ngx-datatable-column prop="EcoOrganisme" cellClass="column-Brand" headerClass="column-Brand">
+                                <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+                                    <span class="tableHeader">Eco organisme</span>
+                                </ng-template>
+                            </ngx-datatable-column>
+
+                            <ngx-datatable-column prop="LastStatus" cellClass="column-Status" headerClass="column-Status">
+                                <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+                                    <span class="tableHeader">Statut</span>
+                                </ng-template>
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <span class="statut" [class]="'statut-'+ row?.LastStatus"> {{ statusDescriptions[row?.LastStatus] }} </span>
+                                </ng-template>
+                            </ngx-datatable-column>
+
+                            <ngx-datatable-column prop="BrandLabel" cellClass="column-Brand" headerClass="column-Brand">
+                                <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+                                    <span class="tableHeader">Marque</span>
+                                </ng-template>
+                            </ngx-datatable-column>
+
+                            <ngx-datatable-column prop="ModelLabel" cellClass="column-Model" headerClass="column-Model">
+                                <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+                                    <span class="tableHeader">Type appareil</span>
+                                </ng-template>
+                            </ngx-datatable-column>
+
+                            <ngx-datatable-column prop="CreateDate" cellClass="column-Date" headerClass="column-Date">
+                                <ng-template let-column="column" ngx-datatable-header-template let-sort="sortFn">
+                                    <span class="tableHeader">Date de création</span>
+                                </ng-template>
+                                <ng-template let-row="row" ngx-datatable-cell-template>
+                                    <span> {{ row?.CreateDate | date : 'dd/MM/yyyy' }} </span>
+                                </ng-template>
+                            </ngx-datatable-column>
+                            <ngx-datatable-footer>
+                                <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize" let-selectedCount="selectedCount" let-curPage="curPage" let-offset="offset" let-isVisible="isVisible">
+                                    <div class="page-count" *ngIf="(rowCount / pageSize) > 1">
+                                        Du {{ ((curPage - 1) * pageSize) + 1}} au {{ ((curPage -1) * pageSize) + pageSize}} sur {{ rowCount}} lignes
+                                    </div>
+                                    <datatable-pager [pagerLeftArrowIcon]="'datatable-icon-left'" [pagerRightArrowIcon]="'datatable-icon-right'" [pagerPreviousIcon]="'datatable-icon-prev'" [pagerNextIcon]="'datatable-icon-skip'" [page]="curPage" [size]="pageSize" [count]="rowCount" [hidden]="!((rowCount / pageSize) > 1)"
+                                        (change)="table.onFooterPage($event)">
+                                    </datatable-pager>
+                                </ng-template>
+                            </ngx-datatable-footer>
+                        </ngx-datatable>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+</ion-content>
+
+<ion-content class="mobile">
+    <div class="container">
+        <ion-grid>
+            <ion-row>
+                <ion-col size-sm="12" size-md="6" size-lg="4">
+                    <div align="left" class="searchTable">
+                        <ion-item class="search-input">
+                            <ion-icon slot="start" name="search" aria-hidden="true" class="icon-search"></ion-icon>
+                            <ion-input type="text" placeholder="Rechercher"  [(ngModel)]="searchText" (ionInput)="updateFilterMobile($event)"></ion-input>
+                        </ion-item>
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+     
+        <div class="claim-read" (click)="toggleWrite()">
+            <p class="claim-read-title">Dossiers à modifier ({{writeCount}})</p>
+            <ion-icon name="chevron-up-outline" *ngIf="!displayWrite"></ion-icon>
+            <ion-icon name="chevron-down-outline"  *ngIf="displayWrite"></ion-icon>
+         
+        </div>
+        <div *ngIf="displayWrite">
+            <div *ngFor="let claim of write">
+                <app-claim-card [id]="claim.ClaimId" [status]="claim.LastStatus" [ecoOrganisme]="claim.EcoOrganisme" [type]="claim.ModelLabel" (click)="openUpdate(claim.ClaimId)"></app-claim-card>
+            </div>
+        </div>
+
+        <div class="claim-read" (click)="toggleRead()">
+            <p class="claim-read-title">Dossiers en lecture ({{readCount}})</p>
+            <ion-icon name="chevron-up-outline" *ngIf="!displayRead"></ion-icon>
+            <ion-icon name="chevron-down-outline"  *ngIf="displayRead"></ion-icon> 
+        </div>
+        <div *ngIf="displayRead">
+            <div *ngFor="let claim of read">
+                <app-claim-card [id]="claim.ClaimId" [status]="claim.LastStatus" [ecoOrganisme]="claim.EcoOrganisme" [type]="claim.ModelLabel" (click)="openDetails(claim)"></app-claim-card>
+            </div>
+        </div>
+    </div>
+</ion-content>

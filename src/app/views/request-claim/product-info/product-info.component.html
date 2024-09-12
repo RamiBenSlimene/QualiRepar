@@ -1,0 +1,92 @@
+<ion-grid>
+    <ion-row>
+        <ion-col class="flex col-title">
+            <img class="icon-sm" src="../../../assets/icon/produitpanne.svg">
+            <ion-label class="label-md">Information produit/panne</ion-label>
+        </ion-col>
+        <ion-col class="col-form">
+            <ion-grid [formGroup]="infoProductForm" class="bg-white">
+                <ion-row>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <!-- commercialRef -->
+                        <ion-item>
+                            <ion-input labelPlacement="floating" formControlName="commercialRef"
+                                placeholder="Saisir la référence commerciale">
+                                <div slot="label"
+                                    [ngClass]="{'label-text': infoProductForm.get('commercialRef')?.hasValidator(Validators.required)}">
+                                    Référence commerciale
+                                </div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <!-- serialNumber -->
+                        <ion-item>
+                            <ion-input labelPlacement="floating" formControlName="serialNumber"
+                                placeholder="Saisir le numéro de serie / IMEI">
+                                <div slot="label"
+                                    [ngClass]="{'label-text': infoProductForm.get('serialNumber')?.hasValidator(Validators.required)}">
+                                    Numéro de série / IMEI
+                                </div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <div class="floating-label required"
+                            [ngClass]="{
+                            'has-focus ion-valid': infoProductForm.get('IRISFamily')?.touched && infoProductForm.get('IRISFamily')?.value,
+                            'ion-touched ion-invalid': infoProductForm.get('IRISFamily')?.touched && !infoProductForm.get('IRISFamily')?.value && infoProductForm.get('IRISFamily')?.hasValidator(Validators.required),
+                            'ion-untouched ion-valid': !infoProductForm.get('IRISFamily')?.touched && infoProductForm.get('IRISFamily')?.value && infoProductForm.get('IRISFamily')?.hasValidator(Validators.required),
+                            'has-focus': infoProductForm.get('IRISFamily')?.touched && !infoProductForm.get('IRISFamily')?.valid }">
+                            <ng-select formControlName="IRISFamily"
+                                [ngClass]="{'ng-select-required': infoProductForm.get('IRISFamily')?.hasValidator(Validators.required)}"
+                                [items]="codeIrisList" bindLabel="Label" bindValue="Code" placeholder="Code panne"
+                                [closeOnSelect]="true">
+                            </ng-select>
+                        </div>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <div class="floating-label"
+                            [ngClass]="{
+                            'has-focus ion-valid': infoProductForm.get('repairSiteId')?.touched && infoProductForm.get('repairSiteId')?.value,
+                            'ion-touched ion-invalid': infoProductForm.get('repairSiteId')?.touched && !infoProductForm.get('repairSiteId')?.value && infoProductForm.get('repairSiteId')?.hasValidator(Validators.required),
+                            'ion-untouched ion-valid': !infoProductForm.get('repairSiteId')?.touched && infoProductForm.get('repairSiteId')?.value && infoProductForm.get('repairSiteId')?.hasValidator(Validators.required),
+                            'has-focus': infoProductForm.get('repairSiteId')?.touched && !infoProductForm.get('repairSiteId')?.valid }">
+                            <ng-select formControlName="repairSiteId"
+                                [ngClass]="{'ng-select-required': infoProductForm.get('repairSiteId')?.hasValidator(Validators.required)}"
+                                [items]="repairSiteList" bindLabel="text" bindValue="value"
+                                placeholder="Site de réparation" [closeOnSelect]="true">
+                            </ng-select>
+                        </div>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <div class="floating-label"
+                            [ngClass]="{
+                            'has-focus ion-valid': infoProductForm.get('depositSiteId')?.touched && infoProductForm.get('depositSiteId')?.value,
+                            'ion-touched ion-invalid': infoProductForm.get('depositSiteId')?.touched && !infoProductForm.get('depositSiteId')?.value && infoProductForm.get('depositSiteId')?.hasValidator(Validators.required),
+                            'ion-untouched ion-valid': !infoProductForm.get('depositSiteId')?.touched && infoProductForm.get('depositSiteId')?.value && infoProductForm.get('depositSiteId')?.hasValidator(Validators.required),
+                            'has-focus': infoProductForm.get('depositSiteId')?.touched && !infoProductForm.get('depositSiteId')?.valid }">
+                            <ng-select
+                                [ngClass]="{'ng-select-required': infoProductForm.get('depositSiteId')?.hasValidator(Validators.required)}"
+                                formControlName="depositSiteId" [items]="depotSiteList" bindLabel="text"
+                                bindValue="value" placeholder="Site de dépôt" [closeOnSelect]="true">
+                            </ng-select>
+                        </div>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="4">
+                        <app-upload-attachement [isUploaded]="isUploaded"
+                            (uploadedAttachementEvent)="upload($event)"></app-upload-attachement>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="4" class="mt--2" *ngIf="attachement"> <!-- -->
+                        <ion-item class="file">
+                            <p class="file-name">{{attachement.name}}</p>
+                            <span class="file-size">{{attachement.size}}</span>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-col>
+    </ion-row>
+</ion-grid>

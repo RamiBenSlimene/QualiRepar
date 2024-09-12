@@ -1,0 +1,69 @@
+<ion-grid>
+    <ion-row>
+        <ion-col class="flex col-title">
+            <img class="icon-sm" src="../../../assets/icon/facture.svg">
+            <ion-label class="label-md">Information facturation</ion-label>
+        </ion-col>
+        <ion-col class="col-form">
+            <ion-grid [formGroup]="facturationForm" class="bg-white">
+                <ion-row>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <ion-item>
+                            <ion-input labelPlacement="floating" formControlName="ConsumerInvoiceNumber"
+                                placeholder="Saisir le numéro de facture ">
+                                <div slot="label"
+                                    [ngClass]="{'label-text': facturationForm.get('ConsumerInvoiceNumber')?.hasValidator(Validators.required)}">
+                                    Numéro de facture
+                                </div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <ion-item>
+                            <ion-input labelPlacement="floating" formControlName="NumFolder"
+                                placeholder="Saisir votre numéro de dossier interne">
+                                <div slot="label"
+                                    [ngClass]="{'label-text': facturationForm.get('NumFolder')?.hasValidator(Validators.required)}">
+                                    Votre numéro de dossier interne
+                                </div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size-sm="12" size-md="6" size-lg="6" class="flex">
+                        <ion-item class="currency-input">
+                            <ion-input labelPlacement="floating" formControlName="TotalAmountInclVAT"
+                                placeholder="Saisir le montant de la réparation hors bonus">
+                                <div slot="label"
+                                    [ngClass]="{'label-text': facturationForm.get('TotalAmountInclVAT')?.hasValidator(Validators.required)}">
+                                    Montant de la réparation hors bonus
+
+                                </div>
+                            </ion-input>
+                        </ion-item>
+                        <ion-item class="currency">
+                            <ion-input labelPlacement="floating" placeholder="" disabled>
+                                <div slot="label">€</div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <ion-item class="item-support-amount">
+                            <p class="item-support-amount-text"> Montant du soutien : {{this.supportAmount}} €</p>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <ion-item size-sm="12" size-md="6" size-lg="6" class="item-date">
+                            <label for="date" [ngClass]="{
+                                'input-date-error': facturationForm.get('RepairDate')?.hasError('required'),'label-text': facturationForm.get('RepairDate')?.hasValidator(Validators.required)
+                              }">Date
+                                de réparation </label>
+                            <input id="date" class="input-date" type="date" formControlName="RepairDate">
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-col>
+    </ion-row>
+    <span class="border-bottom"></span>
+</ion-grid>

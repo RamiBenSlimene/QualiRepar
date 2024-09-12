@@ -1,0 +1,96 @@
+<ion-content>
+    <div class="calculate-support">
+        <img loading="lazy" src="../../../assets/pg-h.png" class="calculate-support-bg" />
+        <img loading="lazy" src="../../../assets/thumbnail_Logo-QualiRéparFlash_Bleu+Orange.png" class="calculate-support-icon" />
+        <div class="calculate-support-body">
+            <div class="calculate-support-body-text ion-margin-bottom">
+                Veuillez renseigner les informations nécessaires pour procéder à votre demande de remboursement.
+            </div>
+            <div class="calculate-support-body-form">
+
+                <ion-list class="ion-margin-vertical">
+                    <ion-item [button]="true" [detail]="false" id="select-brand">
+                        <ion-icon slot="end" size="small" name="chevron-expand-outline" aria-hidden="true"></ion-icon>
+                        <ion-label>{{ selectedBrand.text }}</ion-label>
+                    </ion-item>
+                </ion-list>
+
+                <ion-list class="ion-margin-vertical">
+                    <ion-item [button]="true" [detail]="false" id="select-product">
+                        <ion-icon slot="end" size="small" name="chevron-expand-outline" aria-hidden="true"></ion-icon>
+                        <ion-label>{{ selectedProduct.text }}</ion-label>
+                    </ion-item>
+                </ion-list>
+            </div>
+            <div class="ion-button-success">
+                <ion-button (click)="calculate()" id="calculate" [disabled]="(selectedProduct.value && selectedBrand.value)===''">Vérifier</ion-button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- Modals-->
+
+
+
+
+
+
+    <ion-modal trigger="select-brand" #modalBrand>
+        <ng-template>
+            <app-ag-single-select class="ion-page" title="Marque" [items]="brands" [selectedItems]="selectedBrand" (selectionChange)="brandSelectionChanged($event)" (selectionCancel)="modalBrand.dismiss()"></app-ag-single-select>
+        </ng-template>
+    </ion-modal>
+
+
+
+    <ion-modal trigger="select-product" #modalProduct>
+        <ng-template>
+            <app-ag-single-select class="ion-page" title="Type de produit" [items]="products" [selectedItems]="selectedProduct" (selectionChange)="productSelectionChanged($event)" (selectionCancel)="modalProduct.dismiss()"></app-ag-single-select>
+        </ng-template>
+    </ion-modal>
+
+    <ion-modal #modalPrice [cssClass]="'center'">
+        <ng-template>
+            <div class="content calculate-popup" *ngIf="orgId && ammount">
+                <ion-text class="text-eco">Selon le couple Marque/Type de produit un bonus réparation de {{ammount}} EUROS est proposé par
+                </ion-text>
+                <ion-img src="../../../assets/ecosystem.jpg" alt="ecosystem" width="150px" height="auto" *ngIf="orgId === '45'"></ion-img>
+                <ion-img src="../../../assets/ecologic.logo.svg" alt="ecologic" width="50px" height="auto" *ngIf="orgId === '44'"></ion-img>
+                <div class="ion-button-success ">
+                    <ion-button (click)="createClaim()">Créer une demande</ion-button>
+                </div>
+                <div class="ion-button-secondary">
+                    <ion-button (click)="close()">Annuler</ion-button>
+                </div>
+            </div>
+
+        </ng-template>
+
+    </ion-modal>
+
+    <ion-modal #modalEligibitlity [cssClass]="'center'">
+        <ng-template>
+            <div class="content-popup">
+                <ion-text class="text-eco">Vous n'êtes pas autorisé à faire une demande de soutien pour
+                    <ion-text *ngIf="orgId === '45'">Ecosystem</ion-text>
+
+                    <ion-text *ngIf="orgId === '44'">Ecologic</ion-text>
+                    , merci de mettre à jour vos informations dans ce
+
+                    <ion-text (click)="redirect()"><u>lien</u>
+                    </ion-text>
+                    si vous ne l'avez pas fait.
+
+                </ion-text>
+                <div class="ion-button-secondary">
+                    <ion-button (click)="closeElig()">Annuler</ion-button>
+                </div>
+            </div>
+
+        </ng-template>
+
+    </ion-modal>
+</ion-content>

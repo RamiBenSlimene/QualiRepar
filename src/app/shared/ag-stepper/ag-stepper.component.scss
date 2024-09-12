@@ -1,0 +1,92 @@
+.step {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+    width: 100%;
+    min-width: 480px;
+    padding: 20px 40px;
+    @media only screen and (max-width: 556px) {
+        width: 100vw;
+        padding: 10px 0
+    }
+    &-checked {
+        clip-path: polygon(75% 0%, 78% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
+        -webkit-clip-path: polygon(75% 0%, 78% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
+        width: 400px;
+        height: 50px;
+        background-color: var(--stepper-checked);
+        margin-right: -90px;
+        color:white;
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 20px;
+        @media only screen and (max-width: 956px) {
+            width: 200px;
+            margin-right: -42px;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+        @media only screen and (max-width: 556px) {
+            width: 100%;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+    }
+
+    &-active {
+        width: 400px;
+        height: 50px;
+        background-color: var(--stepper-active);
+        clip-path: polygon(75% 0%, 80% 50%, 75% 100%, 0% 100%, 3% 50%, 0% 0%);
+        -webkit-clip-path: polygon(75% 0%, 80% 50%, 75% 100%, 0% 100%, 3% 50%, 0% 0%);
+        margin-right: -188px;
+        color:white;
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 20px;
+
+        @media only screen and (max-width: 956px) {
+            width: 250px;
+            margin-right: -115px;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+        @media only screen and (max-width: 556px) {
+            width: 100%;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 28px;
+        }
+    }
+
+    &-unchecked {
+        width: 400px;
+        height: 50px;
+        background-color: var(--stepper-unchecked);
+        clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 30% 50%);
+        -webkit-clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 30% 50%);
+        //color:white;
+        font-size: 16px;
+        font-weight: 500;
+        padding-left: 150px;  
+        @media only screen and (max-width: 956px) {
+            width: 250px;
+            padding-left: 82px;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 28px;
+          
+        }
+        @media only screen and (max-width: 556px) {
+            width: 100%;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 28px;
+           
+        }
+    }                             
+
+}

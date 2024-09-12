@@ -1,0 +1,62 @@
+.login {
+    margin: 0;
+    padding: 0;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        img {
+            margin-bottom: 3rem;
+            width: 200px;
+
+        }
+    }
+
+    &-text {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        ion-text {
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 21px;
+        }
+    }
+
+    &-form {
+        padding: 5rem 2.5rem 3rem;
+        background-color: var(--ag-primary-color);
+
+    }
+
+    &-placeholder {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    &-action {
+        background-color: white;
+
+        padding: 2.5rem;
+    }
+}
+
+ion-list {
+    padding: 0;
+    border-radius: 8px;
+}
+
+ion-icon {
+    color: var(--ag-primary-color);
+    margin-inline-end: 12px;
+}
+
+ion-content {
+    color: white
+}

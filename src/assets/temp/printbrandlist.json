@@ -1,0 +1,62 @@
+{
+    "ResponseData": [
+      {
+        "BrandName": "/E/OS",
+        "BrandId": "37357"
+      },
+      {
+        "BrandName": "3D SYSTEMS",
+        "BrandId": "36897"
+      },
+      {
+        "BrandName": "Acer",
+        "BrandId": "1689"
+      },
+      {
+        "BrandName": "Apple",
+        "BrandId": "1698"
+      },
+      {
+        "BrandName": "ELECTROLUX",
+        "BrandId": "1758"
+      },
+      {
+        "BrandName": "GAGGENAU",
+        "BrandId": "18655"
+      },
+      {
+        "BrandName": "Google Pixel",
+        "BrandId": "1778"
+      },
+      {
+        "BrandName": "L.G.",
+        "BrandId": "37075"
+      },
+ 
+      {
+        "BrandName": "SAGEMCOM",
+        "BrandId": "37183"
+      },
+
+      {
+        "BrandName": "XIAOMI",
+        "BrandId": "1918"
+      },
+      {
+        "BrandName": "ZANUSSI",
+        "BrandId": "2194"
+      },
+      {
+        "BrandName": "ZEBRA",
+        "BrandId": "37279"
+      },
+      {
+        "BrandName": "ZODIAC",
+        "BrandId": "18907"
+      }
+    ],
+    "ResponseStatus": "S",
+    "IsValid": true,
+    "ResponseMessage": "",
+    "ResponseErrorMessage": ""
+  }

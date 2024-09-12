@@ -1,0 +1,7 @@
+<label for="tempAttachementInput" *ngIf="!isUploaded" class="custom-attachement-upload">  <img src="../../../assets/web/import2.svg" alt="icon-upload">
+    {{ type | uppercase}}
+  </label>
+  <label for="tempAttachementInput" *ngIf="isUploaded" class="custom-attachement-upload">  <img src="../../../assets/web/success.svg" alt="icon-upload">
+    {{ type | uppercase}}
+  </label>
+  <input id="tempAttachementInput" type="file" name="file" (change)="onSelectFile($event)" #tempAttachementInput accept="image/*" capture="environment">  

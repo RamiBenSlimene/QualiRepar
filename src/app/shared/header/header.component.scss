@@ -1,0 +1,99 @@
+@import "/src/app/styles/variables.scss";
+.header {
+    background-color: var(--ag-primary-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.19);
+    position: relative;
+    padding: 0.5rem 0;
+    z-index: 1;
+    .container {
+        justify-content: space-between;
+        display: flex;
+        align-items: center;
+    }
+    .pipe {
+        height: 12px;
+        display: inline-block;
+        border-left: 2px solid #fff;
+    }
+    .logo {
+        img {
+            max-width: 160px;
+        }
+        @media only screen and (max-width: $lg-screen) {
+            padding: 0 10px;
+        }
+    }
+}
+
+.nav-link {
+    text-decoration: none;
+    margin: 12px;
+    font-size: 16px;
+    color: white;
+    &-active {
+        color: #FCE1C1;
+    }
+    @media only screen and (max-width: $sm-screen) {
+        margin: 6px;
+        font-size: 11px;
+    }
+}
+
+
+.items-toogle {
+    padding: 1rem 0;
+    position: absolute;
+    background-color: var(--ag-primary-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.19);
+    left: 0;
+    right: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+@media screen and (max-width:767px) {
+    .navigation {
+        display: none;
+    }
+}
+
+@media screen and (min-width: $md-screen) {
+    .icon-mobile {
+       display: none;
+    }
+    .items-toogle {
+        display: none;
+    }
+}
+
+.nav-link-sm {
+  
+    text-decoration: none;
+    margin: 12px;
+    font-size: 14px;
+    padding: 4px 12px;
+    color: white;
+    &-active {
+        color: #FCE1C1;
+        padding: 4px 12px;
+        border-radius: 6px;
+    }
+  
+}
+ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+  }
+
+  li {
+    margin: 8px 0; 
+    padding: 0; 
+  }
+.navbar-icon {
+   color: white;
+   margin-right: 1rem;
+   ion-icon {
+    font-size: 28px;
+  }
+}

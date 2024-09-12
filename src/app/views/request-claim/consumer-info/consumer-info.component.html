@@ -1,0 +1,127 @@
+<ion-grid>
+    <ion-row>
+        <ion-col class="flex col-title">
+            <img class="icon-sm" src="../../../assets/icon/user.svg">
+            <ion-label class="label-md">Consommateur</ion-label>
+        </ion-col>
+        <ion-col class="col-form">
+            <ion-grid [formGroup]="userForm" class="bg-white">
+                <ion-row>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <ion-item>
+                            <ion-input labelPlacement="floating" formControlName="LastName" placeholder="Saisir le nom">
+                                <div slot="label"
+                                    [ngClass]="{'label-text': userForm.get('LastName')?.hasValidator(Validators.required)}">
+                                    Nom
+
+                                </div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <ion-item>
+                            <ion-input labelPlacement="floating" formControlName="FirstName"
+                                placeholder="Saisir le prénom">
+                                <div slot="label"
+                                    [ngClass]="{'label-text': userForm.get('FirstName')?.hasValidator(Validators.required)}">
+                                    Prénom
+
+                                </div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <ion-item>
+                            <ion-input labelPlacement="floating" formControlName="Email" placeholder="Saisir l'email">
+                                <div slot="label"
+                                    [ngClass]="{'label-text': userForm.get('Email')?.hasValidator(Validators.required)}">
+                                    Email
+
+                                </div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <ion-item>
+                            <ion-input labelPlacement="floating" formControlName="Phone"
+                                placeholder="Saisir le numéro de téléphone">
+                                <div slot="label"
+                                    [ngClass]="{'label-text': userForm.get('Phone')?.hasValidator(Validators.required)}">
+                                    Téléphone
+
+                                </div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size-sm="12" size-md="12" size-lg="12">
+                        <ion-item>
+                            <ion-input labelPlacement="floating" formControlName="Address1"
+                                placeholder="Saisir l'adresse">
+                                <div slot="label"
+                                    [ngClass]="{'label-text': userForm.get('Address1')?.hasValidator(Validators.required)}">
+                                    Adresse
+                                </div>
+                            </ion-input>
+                        </ion-item>
+                    </ion-col>
+
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <div class="floating-label" [ngClass]="{
+                            'has-focus ion-valid': userForm.get('Zip')?.touched && userForm.get('Zip')?.value,
+                            'ion-touched ion-invalid': userForm.get('Zip')?.touched && !userForm.get('Zip')?.value && userForm.get('Zip')?.hasValidator(Validators.required),
+                            'ion-untouched ion-valid': !userForm.get('Zip')?.touched && userForm.get('Zip')?.value && userForm.get('Zip')?.hasValidator(Validators.required),
+                            'has-focus': userForm.get('Zip')?.touched && !userForm.get('Zip')?.valid
+                        }">
+                            <ng-select #selectZip formControlName="Zip" (focus)="focusedZip = true"
+                                [ngClass]="{'ng-select-required': userForm.get('Zip')?.hasValidator(Validators.required)}"
+                                (blur)="focusedZip = false;onBlurZip($event)" (search)="typingZip = true"
+                                [items]="filtredZipCodes" bindLabel="zipCode" bindValue="zipCode" [searchable]="true"
+                                [typeahead]="typeaheadZip" placeholder="Code postal " [closeOnSelect]="true"
+                                [minTermLength]="2" [virtualScroll]="true" [isOpen]="filtredZipCodes.length>0"
+                                (change)="onZipCodeChange($event)"
+                                (clear)="typingZip = false;this.userForm.get('City')?.reset(); isZipSelected=false ; ">
+                            </ng-select>
+                            <span *ngIf="focusedZip && !typingZip && !this.userForm.value.Zip"
+                                class="input-instruction">Saisir le code
+                                postal</span>
+                        </div>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="6">
+                        <div class="floating-label" [ngClass]="{
+                            'has-focus ion-valid': userForm.get('City')?.touched && userForm.get('City')?.value,
+                            'ion-touched ion-invalid': userForm.get('City')?.touched && !userForm.get('City')?.value && userForm.get('City')?.hasValidator(Validators.required),
+                            'ion-untouched ion-valid': !userForm.get('City')?.touched && userForm.get('City')?.value && userForm.get('City')?.hasValidator(Validators.required),
+                            'has-focus': userForm.get('City')?.touched && !userForm.get('City')?.valid }">
+
+                            <ng-select #selectCity formControlName="City" (focus)="focusedCity = true"
+                                [ngClass]="{'ng-select-required': userForm.get('City')?.hasValidator(Validators.required)}"
+                                (blur)="focusedCity = false; typingCity = false; onBlurCity($event)"
+                                (search)="typingCity = true;" (change)="selectedCity = true" [items]="filtredCities"
+                                placeholder="Ville" [closeOnSelect]="true" (clear)="selectedCity = false"
+                                [virtualScroll]="true" [searchable]="true" [loading]="loadingCity" [minTermLength]="2"
+                                [readonly]="!isZipSelected" notFoundText="Aucune ville trouvée">
+                            </ng-select>
+                            <span *ngIf="focusedCity && !typingCity && !selectedCity && !this.userForm.value.City"
+                                class="input-instruction">Saisir la ville</span>
+                        </div>
+                    </ion-col>
+
+                    <ion-col size-sm="12" size-md="6" size-lg="4">
+                        <app-temp [isUploaded]="isUploaded" (uploadedAttachementEvent)="upload($event)"></app-temp>
+                    </ion-col>
+                    <ion-col size-sm="12" size-md="6" size-lg="4" class="mt--2" *ngIf="attachement">
+                        <ion-item class="file">
+                            <p class="file-name">{{attachement.name}}</p>
+                            <span class="file-size">{{attachement.size}}</span>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-col>
+    </ion-row>
+    <span class="border-bottom"></span>
+</ion-grid>

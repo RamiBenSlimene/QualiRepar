@@ -1,0 +1,133 @@
+@import "/src/app/styles/variables.scss";
+
+ion-row {
+    @media only screen and (max-width: $md-screen) {
+        display: block;
+    }
+}
+
+.col-form {
+    max-width: 80%;
+
+    .bg-white {
+        padding-bottom: 10px;
+    }
+
+    @media only screen and (max-width: $md-screen) {
+        max-width: 100%;
+    }
+}
+
+.col-title {
+    max-width: 20%;
+    align-items: flex-start;
+
+    @media only screen and (max-width: $md-screen) {
+        max-width: 100%;
+    }
+}
+
+.border-bottom {
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    padding: 10px 10px;
+}
+
+ion-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --border-radius: 4px;
+}
+
+ion-avatar ion-img {
+    width: 50%;
+    height: 50%;
+}
+
+ion-item {
+    --border-color: #CBD5E1;
+    --border-width: 1px;
+    --border-radius: 4px;
+    --color: black !important;
+    --detail-icon-color: white;
+    --detail-icon-opacity: 1;
+    --detail-icon-font-size: 20px;
+    padding: 5px;
+    --inner-border-width: 0;
+    border-radius: 6px;
+    padding-bottom: 0;
+}
+
+.pl-4 {
+    padding-left: 4rem;
+}
+
+.item-support-amount {
+    --border-color: #CBD5E1;
+    --border-width: 1px;
+    --border-radius: 4px;
+    --color: #CBD5E1 !important;
+    --detail-icon-color: white;
+    --detail-icon-opacity: 1;
+    --detail-icon-font-size: 20px;
+    padding: 5px;
+
+    &-text {
+        height: 23px;
+    }
+}
+
+.login-placeholder {
+    display: flex;
+    justify-content: space-between;
+
+    .calendar-icon {
+        color: #CBD5E1;
+    }
+}
+
+ion-modal {
+    &.center {
+        --width: calc(100% - 2em);
+        align-items: center;
+        --height: auto;
+
+        .ion-page {
+            position: relative;
+            display: block;
+            contain: content;
+        }
+    }
+}
+
+.currency {
+    max-width: 60px;
+
+    &-input {
+        width: 100%;
+    }
+}
+
+.input-date {
+    border: 0;
+    padding: 12px 6px;
+    position: absolute;
+    right: 0;
+
+    &-error {
+        color: var(--ion-color-danger);
+
+
+    }
+
+}
+
+input[type="date"] {
+    color: gray;
+    font-weight: 400;
+}
+
+input:focus {
+    outline: none;
+}
